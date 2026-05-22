@@ -32,22 +32,18 @@ export default function Portfolio() {
     <main className="bg-[#050816] text-white min-h-screen overflow-hidden relative scroll-smooth">
       {/* Background Glow */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-purple-600/20 blur-[140px] rounded-full" />
-        <div className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-blue-600/20 blur-[140px] rounded-full" />
+        <div className="absolute top-[-10%] left-[20%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-purple-600/20 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[-10%] right-[10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-blue-600/20 blur-[120px] rounded-full" />
       </div>
 
       {/* Navbar */}
       <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/10 backdrop-blur-xl bg-black/20">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+          <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
             JS
           </h1>
 
           <div className="hidden md:flex gap-10 text-gray-300">
-            <a href="#" className="hover:text-white transition">
-              Home
-            </a>
-
             <a href="#about" className="hover:text-white transition">
               About
             </a>
@@ -64,49 +60,50 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center px-6 lg:px-20 pt-32">
+      <section className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-20 pt-32 pb-20">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center w-full">
 
           {/* LEFT */}
-          <div>
-            <p className="text-purple-400 text-xl mb-6">
+          <div className="text-center lg:text-left order-2 lg:order-1">
+
+            <p className="text-purple-400 text-lg sm:text-xl mb-6">
               Hello, I’m 👋
             </p>
 
-            <h1 className="text-7xl md:text-[9rem] font-black leading-none bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+            <h1 className="text-6xl sm:text-7xl md:text-[9rem] font-black leading-none bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
               J S
             </h1>
 
-            <p className="tracking-[0.4em] text-pink-400 mt-4 mb-10 text-xl">
+            <p className="tracking-[0.25em] sm:tracking-[0.4em] text-pink-400 mt-4 mb-8 text-sm sm:text-xl">
               JAYA SHREE J S
             </p>
 
-            <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-8">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 sm:mb-8">
               Building Practical
               <br />
               Applications ✨
             </h2>
 
-            <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-10">
+            <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10">
               Computer Science Engineering student focused on full stack
               development, backend systems, and problem solving.
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-5 mb-10">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5 mb-10 justify-center lg:justify-start">
 
               <a
                 href="https://drive.google.com/file/d/1KdXws-8J0ztb32W2etjk_NoRw6dJW6ka/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-7 py-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(168,85,247,0.5)]"
+                className="px-6 py-4 text-center rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(168,85,247,0.5)]"
               >
                 Download Resume
               </a>
 
               <a
                 href="#projects"
-                className="px-7 py-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition"
+                className="px-6 py-4 text-center rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition"
               >
                 View Projects
               </a>
@@ -114,7 +111,7 @@ export default function Portfolio() {
             </div>
 
             {/* Socials */}
-            <div className="flex items-center gap-8 text-gray-300">
+            <div className="flex items-center justify-center lg:justify-start gap-6 sm:gap-8 text-gray-300 text-sm sm:text-base">
 
               <a
                 href="https://github.com/Jaya-Shree-JS/"
@@ -134,25 +131,18 @@ export default function Portfolio() {
                 LinkedIn
               </a>
 
-              <a
-                href="mailto:yourmail@gmail.com"
-                className="hover:text-white transition"
-              >
-                Email
-              </a>
-
             </div>
           </div>
 
           {/* RIGHT */}
-          <div className="relative flex justify-center">
+          <div className="relative flex justify-center order-1 lg:order-2">
 
-            <div className="absolute w-[550px] h-[550px] border border-purple-500/20 rounded-full animate-pulse" />
+            <div className="absolute w-[320px] sm:w-[550px] h-[320px] sm:h-[550px] border border-purple-500/20 rounded-full animate-pulse" />
 
             {/* Profile Circle */}
-            <div className="relative w-[340px] h-[340px] rounded-full p-[5px] bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 shadow-[0_0_80px_rgba(168,85,247,0.6)]">
+            <div className="relative w-[220px] sm:w-[340px] h-[220px] sm:h-[340px] rounded-full p-[5px] bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 shadow-[0_0_80px_rgba(168,85,247,0.6)]">
 
-              <div className="w-full h-full rounded-full overflow-hidden border-[6px] border-[#050816]">
+              <div className="w-full h-full rounded-full overflow-hidden border-[5px] border-[#050816]">
 
                 <img
                   src="/js_pic.jpeg"
@@ -164,41 +154,41 @@ export default function Portfolio() {
             </div>
 
             {/* Floating Skills */}
-            <div className="absolute top-0 left-0 px-7 py-5 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl">
-              <p className="text-2xl font-semibold">Java</p>
+            <div className="absolute top-0 left-0 px-4 sm:px-7 py-3 sm:py-5 rounded-2xl sm:rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl">
+              <p className="text-sm sm:text-2xl font-semibold">Java</p>
             </div>
 
-            <div className="absolute top-10 right-0 px-7 py-5 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl">
-              <p className="text-2xl font-semibold">Spring Boot</p>
+            <div className="absolute top-8 sm:top-10 right-0 px-4 sm:px-7 py-3 sm:py-5 rounded-2xl sm:rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl">
+              <p className="text-sm sm:text-2xl font-semibold">Spring Boot</p>
             </div>
 
-            <div className="absolute bottom-10 left-0 px-7 py-5 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl">
-              <p className="text-2xl font-semibold">React</p>
+            <div className="absolute bottom-8 sm:bottom-10 left-0 px-4 sm:px-7 py-3 sm:py-5 rounded-2xl sm:rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl">
+              <p className="text-sm sm:text-2xl font-semibold">React</p>
             </div>
 
-            <div className="absolute bottom-0 right-10 px-7 py-5 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl">
-              <p className="text-2xl font-semibold">SQL</p>
+            <div className="absolute bottom-0 right-6 sm:right-10 px-4 sm:px-7 py-3 sm:py-5 rounded-2xl sm:rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl">
+              <p className="text-sm sm:text-2xl font-semibold">SQL</p>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About */}
       <section
         id="about"
-        className="px-6 lg:px-20 py-32"
+        className="px-4 sm:px-6 lg:px-20 py-20 sm:py-32"
       >
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
           {/* LEFT */}
           <div>
 
-            <p className="uppercase tracking-[0.3em] text-purple-400 mb-5">
+            <p className="uppercase tracking-[0.3em] text-purple-400 mb-5 text-sm">
               About Me
             </p>
 
-            <h2 className="text-5xl font-bold leading-tight mb-8">
+            <h2 className="text-3xl sm:text-5xl font-bold leading-tight mb-8">
               Passionate about
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 {" "}code{" "}
@@ -206,12 +196,10 @@ export default function Portfolio() {
               and creating impactful applications.
             </h2>
 
-            <p className="text-gray-400 text-lg leading-relaxed">
+            <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
               I’m a Computer Science Engineering student at Sri Krishna College of Technology, graduating in 2027.
 
               I enjoy building full stack applications using Java, Spring Boot, and React while continuously improving my problem-solving skills through DSA practice.
-
-              I’m particularly interested in backend systems, clean UI experiences, and creating practical applications that solve real-world problems.
             </p>
 
           </div>
@@ -240,14 +228,14 @@ export default function Portfolio() {
 
               <div
                 key={index}
-                className="rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl p-8 hover:border-purple-500/30 hover:-translate-y-2 transition duration-300"
+                className="rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl p-6 sm:p-8 hover:border-purple-500/30 hover:-translate-y-2 transition duration-300"
               >
 
-                <h3 className="text-2xl font-semibold mb-4">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-4">
                   {card.title}
                 </h3>
 
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   {card.desc}
                 </p>
 
@@ -260,15 +248,15 @@ export default function Portfolio() {
       </section>
 
       {/* Projects */}
-      <section id="projects" className="px-6 lg:px-20 py-32">
+      <section id="projects" className="px-4 sm:px-6 lg:px-20 py-20 sm:py-32">
 
         <div className="max-w-7xl mx-auto">
 
-          <p className="uppercase tracking-[0.3em] text-purple-400 mb-5">
+          <p className="uppercase tracking-[0.3em] text-purple-400 mb-5 text-sm">
             Featured Projects
           </p>
 
-          <h2 className="text-5xl font-bold mb-16">
+          <h2 className="text-3xl sm:text-5xl font-bold mb-16">
             Selected Work
           </h2>
 
@@ -281,17 +269,17 @@ export default function Portfolio() {
                 className="rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden hover:border-purple-500/30 hover:-translate-y-2 transition duration-300"
               >
 
-                <div className="h-[240px] bg-gradient-to-br from-purple-500/20 to-blue-500/20 flex items-center justify-center text-3xl font-bold text-center px-6">
+                <div className="h-[180px] sm:h-[240px] bg-gradient-to-br from-purple-500/20 to-blue-500/20 flex items-center justify-center text-2xl sm:text-3xl font-bold text-center px-6">
                   {project.title}
                 </div>
 
-                <div className="p-8">
+                <div className="p-6 sm:p-8">
 
-                  <h3 className="text-3xl font-bold mb-4">
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-4">
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-400 leading-relaxed mb-6">
+                  <p className="text-gray-400 leading-relaxed mb-6 text-sm sm:text-base">
                     {project.desc}
                   </p>
 
@@ -301,7 +289,7 @@ export default function Portfolio() {
 
                       <span
                         key={i}
-                        className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm"
+                        className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm"
                       >
                         {tech}
                       </span>
@@ -329,19 +317,19 @@ export default function Portfolio() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="px-6 lg:px-20 py-32">
+      <section id="contact" className="px-4 sm:px-6 lg:px-20 py-20 sm:py-32">
 
-        <div className="max-w-4xl mx-auto text-center rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl p-16">
+        <div className="max-w-4xl mx-auto text-center rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl p-6 sm:p-16">
 
-          <p className="uppercase tracking-[0.3em] text-purple-400 mb-5">
+          <p className="uppercase tracking-[0.3em] text-purple-400 mb-5 text-sm">
             Contact
           </p>
 
-          <h2 className="text-5xl font-bold mb-8">
+          <h2 className="text-3xl sm:text-5xl font-bold mb-8">
             Let’s Connect.
           </h2>
 
-          <p className="text-gray-400 text-lg mb-10">
+          <p className="text-gray-400 text-base sm:text-lg mb-10">
             Open to internships, collaborations, and learning opportunities.
           </p>
 
@@ -351,7 +339,7 @@ export default function Portfolio() {
               href="https://github.com/Jaya-Shree-JS/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-7 py-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 transition duration-300"
+              className="px-6 py-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 transition duration-300"
             >
               GitHub
             </a>
@@ -360,14 +348,14 @@ export default function Portfolio() {
               href="https://www.linkedin.com/in/jaya-shree-js"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-7 py-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition"
+              className="px-6 py-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition"
             >
               LinkedIn
             </a>
 
           </div>
 
-          {/* Working Contact Form */}
+          {/* Form */}
           <form
             action="https://api.web3forms.com/submit"
             method="POST"
@@ -412,7 +400,7 @@ export default function Portfolio() {
 
             <button
               type="submit"
-              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 transition duration-300 w-fit"
+              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 transition duration-300 w-full sm:w-fit"
             >
               Send Message
             </button>
