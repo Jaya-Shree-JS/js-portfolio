@@ -1,65 +1,425 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+export default function Portfolio() {
+  const projects = [
+    {
+      title: "AI Resume Skill Gap Analyzer",
+      desc: "AI-powered platform that analyzes resumes, detects missing skills, and helps users understand job readiness.",
+      stack: ["React", "Java", "AI"],
+      link: "https://github.com/Jaya-Shree-JS/resume-skill-gap-analyzer",
+    },
+    {
+      title: "Pet Adoption Management",
+      desc: "Full stack application to streamline the pet adoption process with responsive UI and backend management.",
+      stack: ["React", "Spring Boot", "SQL"],
+      link: "https://github.com/iamneo-production/4d950cf3-65b9-4649-af28-41775c9905a9-a8e55768-5035-457f-a115-f35340b05f5c",
+    },
+    {
+      title: "Logistics Management System",
+      desc: "Backend-focused logistics system for shipment tracking, delivery handling, and operational management.",
+      stack: ["Spring Boot", "SQL"],
+      link: "https://github.com/iamneo-production/668672a6-83a2-4e8e-af57-62e7bb3854b0-7eebcb29-3e48-4f12-99c8-fdb2646ab98b",
+    },
+    {
+      title: "JSClickz",
+      desc: "Interactive frontend project focused on modern UI interactions and user experience.",
+      stack: ["JavaScript", "Frontend"],
+      link: "https://github.com/Jaya-Shree-JS/jsclickz",
+    },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
+    <main className="bg-[#050816] text-white min-h-screen overflow-hidden relative scroll-smooth">
+      {/* Background Glow */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-purple-600/20 blur-[140px] rounded-full" />
+        <div className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-blue-600/20 blur-[140px] rounded-full" />
+      </div>
+
+      {/* Navbar */}
+      <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/10 backdrop-blur-xl bg-black/20">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            JS
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <div className="hidden md:flex gap-10 text-gray-300">
+            <a href="#" className="hover:text-white transition">
+              Home
+            </a>
+
+            <a href="#about" className="hover:text-white transition">
+              About
+            </a>
+
+            <a href="#projects" className="hover:text-white transition">
+              Projects
+            </a>
+
+            <a href="#contact" className="hover:text-white transition">
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="relative min-h-screen flex items-center px-6 lg:px-20 pt-32">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center w-full">
+
+          {/* LEFT */}
+          <div>
+            <p className="text-purple-400 text-xl mb-6">
+              Hello, I’m 👋
+            </p>
+
+            <h1 className="text-7xl md:text-[9rem] font-black leading-none bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+              J S
+            </h1>
+
+            <p className="tracking-[0.4em] text-pink-400 mt-4 mb-10 text-xl">
+              JAYA SHREE J S
+            </p>
+
+            <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-8">
+              Building Practical
+              <br />
+              Applications ✨
+            </h2>
+
+            <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-10">
+              Computer Science Engineering student focused on full stack
+              development, backend systems, and problem solving.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-5 mb-10">
+
+              <a
+                href="https://drive.google.com/file/d/1KdXws-8J0ztb32W2etjk_NoRw6dJW6ka/view?usp=drivesdk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-7 py-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(168,85,247,0.5)]"
+              >
+                Download Resume
+              </a>
+
+              <a
+                href="#projects"
+                className="px-7 py-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition"
+              >
+                View Projects
+              </a>
+
+            </div>
+
+            {/* Socials */}
+            <div className="flex items-center gap-8 text-gray-300">
+
+              <a
+                href="https://github.com/Jaya-Shree-JS/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition"
+              >
+                GitHub
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/jaya-shree-js"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition"
+              >
+                LinkedIn
+              </a>
+
+              <a
+                href="mailto:yourmail@gmail.com"
+                className="hover:text-white transition"
+              >
+                Email
+              </a>
+
+            </div>
+          </div>
+
+          {/* RIGHT */}
+          <div className="relative flex justify-center">
+
+            <div className="absolute w-[550px] h-[550px] border border-purple-500/20 rounded-full animate-pulse" />
+
+            {/* Profile Circle */}
+            <div className="relative w-[340px] h-[340px] rounded-full p-[5px] bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 shadow-[0_0_80px_rgba(168,85,247,0.6)]">
+
+              <div className="w-full h-full rounded-full overflow-hidden border-[6px] border-[#050816]">
+
+                <img
+                  src="/js_pic.jpeg"
+                  alt="profile"
+                  className="w-full h-full object-cover"
+                />
+
+              </div>
+            </div>
+
+            {/* Floating Skills */}
+            <div className="absolute top-0 left-0 px-7 py-5 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl">
+              <p className="text-2xl font-semibold">Java</p>
+            </div>
+
+            <div className="absolute top-10 right-0 px-7 py-5 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl">
+              <p className="text-2xl font-semibold">Spring Boot</p>
+            </div>
+
+            <div className="absolute bottom-10 left-0 px-7 py-5 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl">
+              <p className="text-2xl font-semibold">React</p>
+            </div>
+
+            <div className="absolute bottom-0 right-10 px-7 py-5 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl">
+              <p className="text-2xl font-semibold">SQL</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section
+        id="about"
+        className="px-6 lg:px-20 py-32"
+      >
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+
+          {/* LEFT */}
+          <div>
+
+            <p className="uppercase tracking-[0.3em] text-purple-400 mb-5">
+              About Me
+            </p>
+
+            <h2 className="text-5xl font-bold leading-tight mb-8">
+              Passionate about
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                {" "}code{" "}
+              </span>
+              and creating impactful applications.
+            </h2>
+
+            <p className="text-gray-400 text-lg leading-relaxed">
+              I’m a Computer Science Engineering student at Sri Krishna College of Technology, graduating in 2027.
+
+              I enjoy building full stack applications using Java, Spring Boot, and React while continuously improving my problem-solving skills through DSA practice.
+
+              I’m particularly interested in backend systems, clean UI experiences, and creating practical applications that solve real-world problems.
+            </p>
+
+          </div>
+
+          {/* RIGHT */}
+          <div className="grid sm:grid-cols-2 gap-6">
+
+            {[
+              {
+                title: "Backend Focused",
+                desc: "Strong foundation in Java, Spring Boot, and REST API development.",
+              },
+              {
+                title: "Full Stack Development",
+                desc: "Building responsive frontends with React and scalable backend systems.",
+              },
+              {
+                title: "Problem Solving",
+                desc: "Continuously improving DSA and logical thinking abilities.",
+              },
+              {
+                title: "Creative Thinking",
+                desc: "Combining technical knowledge with modern UI and design sense.",
+              },
+            ].map((card, index) => (
+
+              <div
+                key={index}
+                className="rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl p-8 hover:border-purple-500/30 hover:-translate-y-2 transition duration-300"
+              >
+
+                <h3 className="text-2xl font-semibold mb-4">
+                  {card.title}
+                </h3>
+
+                <p className="text-gray-400 leading-relaxed">
+                  {card.desc}
+                </p>
+
+              </div>
+
+            ))}
+
+          </div>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="px-6 lg:px-20 py-32">
+
+        <div className="max-w-7xl mx-auto">
+
+          <p className="uppercase tracking-[0.3em] text-purple-400 mb-5">
+            Featured Projects
           </p>
+
+          <h2 className="text-5xl font-bold mb-16">
+            Selected Work
+          </h2>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+
+            {projects.map((project, index) => (
+
+              <div
+                key={index}
+                className="rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden hover:border-purple-500/30 hover:-translate-y-2 transition duration-300"
+              >
+
+                <div className="h-[240px] bg-gradient-to-br from-purple-500/20 to-blue-500/20 flex items-center justify-center text-3xl font-bold text-center px-6">
+                  {project.title}
+                </div>
+
+                <div className="p-8">
+
+                  <h3 className="text-3xl font-bold mb-4">
+                    {project.title}
+                  </h3>
+
+                  <p className="text-gray-400 leading-relaxed mb-6">
+                    {project.desc}
+                  </p>
+
+                  <div className="flex flex-wrap gap-3 mb-8">
+
+                    {project.stack.map((tech, i) => (
+
+                      <span
+                        key={i}
+                        className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm"
+                      >
+                        {tech}
+                      </span>
+
+                    ))}
+
+                  </div>
+
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-3 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 transition duration-300"
+                  >
+                    View Project
+                  </a>
+
+                </div>
+              </div>
+
+            ))}
+
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="px-6 lg:px-20 py-32">
+
+        <div className="max-w-4xl mx-auto text-center rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl p-16">
+
+          <p className="uppercase tracking-[0.3em] text-purple-400 mb-5">
+            Contact
+          </p>
+
+          <h2 className="text-5xl font-bold mb-8">
+            Let’s Connect.
+          </h2>
+
+          <p className="text-gray-400 text-lg mb-10">
+            Open to internships, collaborations, and learning opportunities.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-5 mb-10">
+
+            <a
+              href="https://github.com/Jaya-Shree-JS/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-7 py-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 transition duration-300"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/jaya-shree-js"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-7 py-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition"
+            >
+              LinkedIn
+            </a>
+
+          </div>
+
+          {/* Working Contact Form */}
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            className="grid gap-5 max-w-2xl mx-auto text-left"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+            <input
+              type="hidden"
+              name="access_key"
+              value="330ca300-591f-4f7a-8d06-2f8ca4cb79b2"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+            <input
+              type="hidden"
+              name="subject"
+              value="New Portfolio Contact"
+            />
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none text-white"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none text-white"
+            />
+
+            <textarea
+              name="message"
+              rows="6"
+              placeholder="Your Message"
+              required
+              className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none text-white"
+            />
+
+            <button
+              type="submit"
+              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 transition duration-300 w-fit"
+            >
+              Send Message
+            </button>
+
+          </form>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
